@@ -19,6 +19,8 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.wpm.enums.LeaseStatus;
+
 @Component
 @Entity
 @Table(name="LEASES")
@@ -34,6 +36,7 @@ public class Lease {
 	@JoinColumn(name="TENANT_ID", referencedColumnName="TENANT_ID", foreignKey=@ForeignKey(name ="FK_TENANT_ID_LEASE"))
 	private Tenant tenant;
 
+	@Column
 	private String lease;
 
 	@Column(nullable = false)
@@ -47,10 +50,10 @@ public class Lease {
 	 * 2. Terminated
 	 */
 	
-	private Status status;
+	private LeaseStatus status;
 	
 	@Enumerated(EnumType.ORDINAL)
-	private Status getStatus () {
+	private LeaseStatus getStatus () {
 		return status;
 	}
 
