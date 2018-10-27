@@ -1,1 +1,67 @@
 First Thing we need to do is add a tenant
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Tenant
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tenant Information</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Tenant information form --> 
+        <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName">First Name</label>
+      <input type="firstname" class="form-control" id="inputLastName" placeholder="John">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Last Name</label>
+      <input type="lastname" class="form-control" id="inputLastName" placeholder="Smith">
+    </div>
+    <div class="form-group col-md-2">
+        <label for="inputSSN">SSN</label>
+        <input type="text" style=width:110px; class="form-control" id="inputSSN">
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <!--Add an autocomplete API here -->
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>NC</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add Tenant</button>
+      </div>
+    </div>
+  </div>
+</div>

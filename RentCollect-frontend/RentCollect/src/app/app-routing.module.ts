@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { TenantComponent } from './components/tenant/tenant.component';
+import { UnitComponent } from './components/unit/unit.component';
 
 /*
 ROUTES!
@@ -17,7 +18,8 @@ export const routes: Routes = [
     { path: 'logout', component: LoginComponent},
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent},
-    { path: 'tenant', component: TenantComponent}
+    { path: 'tenant', component: TenantComponent},
+    { path: 'unit', component: UnitComponent}
 ];
 
 @NgModule({
