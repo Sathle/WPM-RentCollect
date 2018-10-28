@@ -15,4 +15,8 @@ public class TenantService {
 	public void save(Tenant t) {
 		tr.save(t);
 	}
+	
+	public Tenant findAll() {
+		tr.findAll();
+	}
 }
