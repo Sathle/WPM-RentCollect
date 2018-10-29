@@ -28,7 +28,10 @@ public class Tenant {
     private String lastName;
     
     @Column(nullable=false)
-    private int ssn;
+    private String ssn;
+    
+    @Column
+    private String address;
     
     //stores url to link to image in S3 bucket;  
     
@@ -37,7 +40,7 @@ public class Tenant {
     @Override
 	public String toString() {
 		return "Tenant [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", ssn=" + ssn
-				+ ", driverLicense=" + driverLicense + "]";
+				+ ", address=" + address + ", driverLicense=" + driverLicense + "]";
 	}
 
 	public int getId() {
@@ -52,6 +55,24 @@ public class Tenant {
 		return firstName;
 	}
 
+	public Tenant(int id, String firstName, String lastName, String ssn, String address, String driverLicense) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.ssn = ssn;
+		this.address = address;
+		this.driverLicense = driverLicense;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -64,11 +85,11 @@ public class Tenant {
 		this.lastName = lastName;
 	}
 
-	public int getSsn() {
+	public String getSsn() {
 		return ssn;
 	}
 
-	public void setSsn(int ssn) {
+	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
 
@@ -80,14 +101,6 @@ public class Tenant {
 		this.driverLicense = driverLicense;
 	}
 
-	public Tenant(int id, String firstName, String lastName, int ssn, String driverLicense) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.ssn = ssn;
-		this.driverLicense = driverLicense;
-	}
 
 	public Tenant () {}
 

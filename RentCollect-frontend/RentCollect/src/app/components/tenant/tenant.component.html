@@ -1,8 +1,26 @@
-First Thing we need to do is add a tenant
+<h1>Display Tenant Information</h1>
+
+<table class="table table-striped">
+<tr>
+  <th>ID</th>
+  <th>Fist Name</th>
+  <th>Last Name</th>
+  <th>SSN</th>
+  <th>Address</th>
+</tr>
+<tr *ngFor="let a of tenants">
+  <td>{{a.id}}</td>
+  <td>{{a.firstName}}</td>
+  <td>{{a.lastName}}</td>
+  <td>{{a.ssn}}</td>
+  <td>{{a.address}}</td>
+</tr>
+</table>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add Tenant
+  
 </button>
 
 
@@ -17,26 +35,29 @@ First Thing we need to do is add a tenant
         </button>
       </div>
       <div class="modal-body">
+
         <!-- Tenant information form --> 
         <form>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputFirstName">First Name</label>
-      <input type="firstname" class="form-control" id="inputLastName" placeholder="John">
+      <input name="firstname" class="form-control" id="inputLastName" placeholder="John" [(ngModel)]="firstname" required>
+      <br>
+    
     </div>
     <div class="form-group col-md-6">
       <label for="inputLastName">Last Name</label>
-      <input type="lastname" class="form-control" id="inputLastName" placeholder="Smith">
+      <input name="lastname" class="form-control" id="inputLastName" placeholder="Smith" [(ngModel)]="lastname" required>
     </div>
     <div class="form-group col-md-2">
         <label for="inputSSN">SSN</label>
-        <input type="text" style=width:110px; class="form-control" id="inputSSN">
+        <input name="ssn" type="text" style=width:110px; class="form-control" id="inputSSN" placeholder="#########" [(ngModel)]="ssn">
       </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <!--Add an autocomplete API here -->
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <label for="inputAddress">Address</label>        <!--Add an autocomplete API here -->
+    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+    <!-- <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="address"> -->
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -60,7 +81,7 @@ First Thing we need to do is add a tenant
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Tenant</button>
+        <button type="submit" class="btn btn-primary" (click)="addTenant()"> Add Tenant</button>
       </div>
     </div>
   </div>

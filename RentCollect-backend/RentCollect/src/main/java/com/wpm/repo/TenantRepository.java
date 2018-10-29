@@ -8,5 +8,6 @@ import com.wpm.model.Tenant;
 @Repository
 public interface TenantRepository extends CrudRepository<Tenant, Integer> {
 
+	
 }
 

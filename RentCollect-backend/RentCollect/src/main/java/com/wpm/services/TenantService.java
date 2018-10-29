@@ -13,10 +13,13 @@ public class TenantService {
 	TenantRepository tr;
 	
 	public void save(Tenant t) {
+		System.out.println("-----4574874-----------------------------------------------------");
+		System.out.println(t);
 		tr.save(t);
 	}
 	
-	public Tenant findAll() {
-		tr.findAll();
+	public Iterable<Tenant> findAll() {
+		System.out.println("in Service findAll");
+		return tr.findAll();
 	}
 }
