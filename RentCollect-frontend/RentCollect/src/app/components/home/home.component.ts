@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  firstName: string;
+  lastName: string;
+
+
+  holder: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  test() {
+    this.holder = this.firstName;
+    console.log(this.holder);
+  }
 }

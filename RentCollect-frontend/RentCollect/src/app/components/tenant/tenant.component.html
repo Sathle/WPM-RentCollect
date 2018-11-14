@@ -20,7 +20,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Add Tenant
-  
 </button>
 
 
@@ -37,27 +36,27 @@
       <div class="modal-body">
 
         <!-- Tenant information form --> 
-        <form>
+<form>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputFirstName">First Name</label>
-      <input name="firstname" class="form-control" id="inputLastName" placeholder="John" [(ngModel)]="firstname" required>
+      <input name="firstname" class="form-control" id="inputFirstName" placeholder="John" required [(ngModel)]='firstName' >
       <br>
-    
+    {{ firstName }}
     </div>
     <div class="form-group col-md-6">
       <label for="inputLastName">Last Name</label>
-      <input name="lastname" class="form-control" id="inputLastName" placeholder="Smith" [(ngModel)]="lastname" required>
+      <input name="lastname" class="form-control" id="inputLastName" placeholder="Smith" required [(ngModel)]="lastName" >
     </div>
     <div class="form-group col-md-2">
         <label for="inputSSN">SSN</label>
         <input name="ssn" type="text" style=width:110px; class="form-control" id="inputSSN" placeholder="#########" [(ngModel)]="ssn">
-      </div>
+    </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>        <!--Add an autocomplete API here -->
-    <input ngx-google-places-autocomplete [options]='options' #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
-    <!-- <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="address"> -->
+    <label for="inputAddress">Address</label>        <!--Add an autocomplete API here, maybe... -->
+    <!-- <input type="text" class="google-place-input" placeholder="Type to search.."> -->
+    <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" [(ngModel)]="address">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -76,13 +75,19 @@
       <input type="text" class="form-control" id="inputZip">
     </div>
   </div>
-  
-</form>
+
+  <!-- <button type="submit" class="btn btn-success" (click)="addTenant()">Submit</button> -->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <input type="submit" class="btn btn-primary" (click)="addTenant()" value="Add Tenant">
+  </div>
+ </form>
       </div>
-      <div class="modal-footer">
+      
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary" (click)="addTenant()"> Add Tenant</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

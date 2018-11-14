@@ -1,4 +1,7 @@
 // import { Directive, ElementRef, OnInit } from '@angular/core';
+
+
+// declare function require(path: string): any;
 // const google = require('@types/googlemaps');
 
 // @Directive({

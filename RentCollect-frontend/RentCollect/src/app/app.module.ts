@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { TenantComponent } from './components/tenant/tenant.component';
 import { LoginComponent } from './components/login/login.component';
@@ -11,8 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UnitComponent } from './components/unit/unit.component';
-//import { GooglePlacesDirective } from './directives/google-places.directive';
+// import { GooglePlacesDirective } from './directives/google-places.directive';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { AgmCoreModule } from '@agm/core'
 /// <reference types="@types/googlemaps" />
 
 @NgModule({
@@ -23,7 +23,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     HomeComponent,
     NavbarComponent,
     UnitComponent
-    //GooglePlacesDirective
+    // GooglePlacesDirective
   ],
   imports: [
     BrowserModule,
@@ -31,7 +31,11 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    // AgmCoreModule.forRoot({
+    //   apiKey: AIzaSyBFcG77N7PrzrBuj52yJK6YEHUj4itShAU,
+    //   libraries: ["places"]
+    // })
 
   ],
   providers: [],
