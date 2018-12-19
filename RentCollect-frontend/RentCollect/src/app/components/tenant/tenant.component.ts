@@ -19,6 +19,7 @@ export class TenantComponent implements OnInit {
   lastName: string;
   ssn: string;
   address: string;
+  state: string;
 
 
   constructor(private tServ: TenantserviceService,) {}
@@ -41,7 +42,7 @@ export class TenantComponent implements OnInit {
     console.log("Last Name: " + this.tenant.lastName);
     this.tenant.ssn = this.ssn;
     console.log("SSN: " + this.tenant.ssn);
-    this.tenant.address = this.address;
+    
 
     // this.tenant.firstName =  "Mipl";
     // console.log(this.tenant.firstName)

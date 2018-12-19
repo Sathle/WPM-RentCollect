@@ -12,7 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UnitComponent } from './components/unit/unit.component';
 // import { GooglePlacesDirective } from './directives/google-places.directive';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
-import { AgmCoreModule } from '@agm/core'
+import { AgmCoreModule } from '@agm/core';
+import { LeaseComponent } from './components/lease/lease.component'
 /// <reference types="@types/googlemaps" />
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AgmCoreModule } from '@agm/core'
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    UnitComponent
+    UnitComponent,
+    LeaseComponent
     // GooglePlacesDirective
   ],
   imports: [
