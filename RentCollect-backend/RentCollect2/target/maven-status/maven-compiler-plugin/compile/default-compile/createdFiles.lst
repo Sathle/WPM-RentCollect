@@ -1,0 +1,13 @@
+com\wpm\model\Unit.class
+com\wpm\services\TenantService.class
+com\wpm\model\Occupation.class
+com\wpm\Application.class
+com\wpm\repo\LeaseRepository.class
+com\wpm\repo\TenantRepository.class
+com\wpm\model\Tenant.class
+com\wpm\controller\TenantController.class
+com\wpm\model\Lease.class
+com\wpm\repo\OccupationRepository.class
+com\wpm\enums\UnitStatus.class
+com\wpm\controller\HomeController.class
+com\wpm\enums\LeaseStatus.class

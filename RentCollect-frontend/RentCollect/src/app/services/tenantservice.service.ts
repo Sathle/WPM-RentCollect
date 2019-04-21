@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class TenantserviceService {
+export class TenantService {
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +19,6 @@ export class TenantserviceService {
   }
 
   public saveTenant() {
-    return this.http.get<Tenant[]> ('http://localhost:8400/RentCollect/saveTenant');
+    return this.http.post<Tenant[]> ('http://localhost:8400/RentCollect/saveTenant', Tenant );
   }
 }

@@ -54,80 +54,27 @@
 			<artifactId>spring-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0</version>
-        </dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.16.16</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.1.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.restdocs</groupId>
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.asciidoctor</groupId>
-				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<!-- … -->
-			</plugin>
-			<plugin> 
-			<groupId>org.asciidoctor</groupId>
-			<artifactId>asciidoctor-maven-plugin</artifactId>
-			<version>1.5.3</version>
-			<executions>
-				<execution>
-					<id>generate-docs</id>
-					<phase>prepare-package</phase> 
-					<goals>
-						<goal>process-asciidoc</goal>
-					</goals>
-					<configuration>
-						<backend>html</backend>
-						<doctype>book</doctype>
-					</configuration>
-				</execution>
-			</executions>
-			<dependencies>
-				<dependency> 
-					<groupId>org.springframework.restdocs</groupId>
-					<artifactId>spring-restdocs-asciidoctor</artifactId>
-					<version>2.0.3.RELEASE</version>
-				</dependency>
-			</dependencies>
-		</plugin>
-			<plugin>
-				<artifactId>maven-resources-plugin</artifactId>
-				<version>2.7</version>
-				<executions>
-					<execution>
-						<id>copy-resources</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>copy-resources</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>
-								${project.build.outputDirectory}/static/docs
-							</outputDirectory>
-							<resources>
-								<resource>
-									<directory>
-										${project.build.directory}/generated-docs
-									</directory>
-								</resource>
-							</resources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 
 	<repositories>
 		<repository>

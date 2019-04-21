@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TenantserviceService } from 'src/app/services/tenantservice.service';
+import { TenantService } from 'src/app/services/tenantservice.service';
 import { Tenant } from 'src/app/models/tenant.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -22,7 +22,7 @@ export class TenantComponent implements OnInit {
   state: string;
 
 
-  constructor(private tServ: TenantserviceService,) {}
+  constructor(private tServ: TenantService,) {}
 
   ngOnInit() {
     this.tServ.getTenants().subscribe(
@@ -42,15 +42,10 @@ export class TenantComponent implements OnInit {
     console.log("Last Name: " + this.tenant.lastName);
     this.tenant.ssn = this.ssn;
     console.log("SSN: " + this.tenant.ssn);
+    this.tenant.address = this.address;
+    console.log("Address: " + this.address)
+    this.tenant.state = this.state;
     
-
-    // this.tenant.firstName =  "Mipl";
-    // console.log(this.tenant.firstName)
-    // this.tenant.firstName = this.firstName;
-    // this.tenant.lastName = this.lastName;
-    // this.tenant.ssn = this.ssn;
-    // this.tenant.address = this.address;
-    // console.log(this.tenant.firstName);
   }
 
 }

@@ -13,7 +13,9 @@ import { UnitComponent } from './components/unit/unit.component';
 // import { GooglePlacesDirective } from './directives/google-places.directive';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { AgmCoreModule } from '@agm/core';
-import { LeaseComponent } from './components/lease/lease.component'
+import { LeaseComponent } from './components/lease/lease.component';
+// import { AccordianModule } from 'primeng/accordian';
+// import { MenuItem } from 'primeng/apZVXi';
 /// <reference types="@types/googlemaps" />
 
 @NgModule({
@@ -33,7 +35,7 @@ import { LeaseComponent } from './components/lease/lease.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    GooglePlaceModule,
+    GooglePlaceModule
     // AgmCoreModule.forRoot({
     //   apiKey: AIzaSyBFcG77N7PrzrBuj52yJK6YEHUj4itShAU,
     //   libraries: ["places"]
