@@ -41,6 +41,10 @@ html {
     padding: 20px;
     padding-top: 100px;
   }
+
+  #hand {
+    cursor: pointer;
+  }
   
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;

@@ -10,15 +10,15 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
-      <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-      <input type="submit" class="fadeIn fourth" value="Log In">
+      <input type="text" id="username" class="fadeIn second" name="username" placeholder="username" [(ngModel)]="username">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" [(ngModel)]="password">
+      <input id="hand" cursor="pointer" type="submit" class="fadeIn-fourth" value="Log In">
     </form>
 
-    <!-- Remind Password -->
-    <div id="formFooter">
+    <!-- Remind Password (to be added later)-->
+    <!-- <div id="formFooter">
       <a class="underlineHover" href="/tenant">Forgot your password?</a>
-    </div>
+    </div> -->
 
   </div>
 </div>

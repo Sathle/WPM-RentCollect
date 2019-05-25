@@ -1,0 +1,14 @@
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\enums\UnitStatus.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\model\Tenant.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\controller\TenantController.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\model\Lease.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\enums\LeaseStatus.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\configuration\CorsConfig.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\model\Unit.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\repo\LeaseRepository.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\repo\TenantRepository.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\model\Occupation.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\services\TenantService.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\Application.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\repo\OccupationRepository.java
+D:\my_git_repos\WPM-RentCollect\RentCollect-backend\RentCollect2\src\main\java\com\wpm\controller\HomeController.java
