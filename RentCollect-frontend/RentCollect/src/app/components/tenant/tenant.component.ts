@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TenantService } from 'src/app/services/tenantservice.service';
 import { Tenant } from 'src/app/models/tenant.model';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-tenant',
@@ -45,7 +46,15 @@ export class TenantComponent implements OnInit {
     this.tenant.address = this.address;
     console.log("Address: " + this.address)
     this.tenant.state = this.state;
-    
+    console.log(this.tenant);
+    this.tServ.saveTenant(this.tenant)
+      .subscribe(
+        data => {
+          console.log("Tenant Add Request Sent");
+        }, err => {
+          console.log("Error in addTenant()");
+        })
+    delay(6000);
+    location.reload();
   }
-
 }

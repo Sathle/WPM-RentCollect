@@ -5,14 +5,12 @@
   <th>ID</th>
   <th>Fist Name</th>
   <th>Last Name</th>
-  <th>SSN</th>
   <th>Address</th>
 </tr>
 <tr *ngFor="let a of tenants">
   <td>{{a.id}}</td>
   <td>{{a.firstName}}</td>
   <td>{{a.lastName}}</td>
-  <td>{{a.ssn}}</td>
   <td>{{a.address}}</td>
 </tr>
 </table>
@@ -128,15 +126,10 @@
   <!-- <button type="submit" class="btn btn-success" (click)="addTenant()">Submit</button> -->
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <input type="submit" class="btn btn-primary" (click)="addTenant()" value="Add Tenant">
+    <input type="submit" class="btn btn-primary" data-dismiss="modal" (click)="addTenant()" value="Add Tenant">
   </div>
  </form>
       </div>
-      
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary" (click)="addTenant()"> Add Tenant</button>
-      </div> -->
     </div>
   </div>
 </div>
