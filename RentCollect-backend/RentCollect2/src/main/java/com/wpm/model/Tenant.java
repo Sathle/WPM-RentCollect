@@ -27,7 +27,7 @@ public class Tenant {
     @Column(nullable=false)
     private String lastName;
     
-    @Column(nullable=false)
+    @Column
     private String ssn;
     
     @Column

@@ -29,20 +29,20 @@ public class TenantController {
 	
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(TenantController.class);
 	
-	@RequestMapping(value="/saveTenant", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE,
-			produces = MediaType.APPLICATION_JSON_VALUE)
-	public void saveTenant(@Valid @RequestBody Tenant t) {
-		System.out.println("----------------------------------------------------------");
-		System.out.println(t);
+	@RequestMapping(value="/saveTenant", method=RequestMethod.PUT)
+	public void saveTenant(@RequestBody Tenant t) {
+		log.info("Saving Tenant...");
 		tServ.save(t);
 	}
 	
+	//Retrieve all tenants
 	@RequestMapping(value="/getTenants", method=RequestMethod.GET)
 	public List<Tenant> getTenants() {
-		
 		log.info("Getting Tenant...");
 		return (List<Tenant>) tServ.findAll();
 		
 	}
+	
+	
 	
 }
